@@ -26,10 +26,10 @@ namespace TallerPOO
         // === Validación privada ===
         private static void ValidateOrThrow(int h, int m, int s, int ms)
         {
-            if (h < 0 || h > 23) throw new ArgumentOutOfRangeException(nameof(h), "The hour: " + h + ", is not valid.");
-            if (m < 0 || m > 59) throw new ArgumentOutOfRangeException(nameof(m), "The minute: " + m + ", is not valid.");
-            if (s < 0 || s > 59) throw new ArgumentOutOfRangeException(nameof(s), "The second: " + s + ", is not valid.");
-            if (ms < 0 || ms > 999) throw new ArgumentOutOfRangeException(nameof(ms), "The millisecond: " + ms + ", is not valid.");
+            if (h < 0 || h > 23) throw new Exception($"The hour: " + h + ", is not valid.");
+            if (m < 0 || m > 59) throw new Exception($"The minute: " + m + ", is not valid.");
+            if (s < 0 || s > 59) throw new Exception($"The second: " + s + ", is not valid.");
+            if (ms < 0 || ms > 999) throw new Exception($"The millisecond: " + ms + ", is not valid.");
         }
 
         // === ToString (formato NO militar) ===
